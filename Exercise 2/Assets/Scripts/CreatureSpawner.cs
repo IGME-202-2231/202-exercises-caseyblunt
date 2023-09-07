@@ -13,8 +13,8 @@ public class CreatureSpawner : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            posX = Random.Range(0.0f, 20.0f);
-            posZ = Random.Range(0.0f, 20.0f);
+            posX = Random.Range(-33.0f, 33.0f);
+            posZ = Random.Range(-33.0f, 33.0f);
             pos = new Vector3(posX, 1.46f, posZ);
             Instantiate(creaturePrefab);
             creaturePrefab.transform.position = pos;
