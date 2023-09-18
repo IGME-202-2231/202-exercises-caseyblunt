@@ -10,3 +10,4 @@
 -   [Exercise 08](builds/exercise_8/)
 -   [Exercise 09](builds/exercise_9/)
 -   [Exercise 10](builds/exercise_10/)
+-   [Project 01](builds/project_1/)
