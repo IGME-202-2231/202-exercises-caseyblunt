@@ -34,7 +34,7 @@ public class CollisionManager : MonoBehaviour
         {
             bool isColliding = false;
 
-            // Choose the appropriate collision method based on the active mode
+            // Choose collision method based on active mode
             if (activeCollisionMode == CollisionMode.AABB)
             {
                 isColliding = AABBCollision(obstacle, player);
