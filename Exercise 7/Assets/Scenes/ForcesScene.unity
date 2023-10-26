@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &103097163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1258255929001608848, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
+  m_PrefabInstance: {fileID: 3913094075722296467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbeaedb3e001294f886e0ffa3147a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +226,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &980536276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 980536278}
+  - component: {fileID: 980536277}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &980536277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980536276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083518ea38ccc454b9e6d800ba6088d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhysicsObjects:
+  - {fileID: 103097163}
+  - {fileID: 1036099055}
+  - {fileID: 1319996841}
+--- !u!4 &980536278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980536276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1036099055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1722045739726627537, guid: f71e066b49a69f5418a59705cffcc9a3, type: 3}
+  m_PrefabInstance: {fileID: 5395627977558721256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbeaedb3e001294f886e0ffa3147a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1319996841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5272701390239443776, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+  m_PrefabInstance: {fileID: 6955298985723881436}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbeaedb3e001294f886e0ffa3147a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3913094075722296467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +304,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1258255929001608848, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1551628952361017390, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
       propertyPath: m_Name
       value: Small Monster
@@ -328,6 +413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1722045739726627537, guid: f71e066b49a69f5418a59705cffcc9a3, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4189627406275040205, guid: f71e066b49a69f5418a59705cffcc9a3, type: 3}
       propertyPath: m_Name
       value: Med Monster
@@ -388,6 +477,10 @@ PrefabInstance:
     - target: {fileID: 3555504200068892474, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272701390239443776, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+      propertyPath: maxSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5272701390239443776, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: velocity.x
