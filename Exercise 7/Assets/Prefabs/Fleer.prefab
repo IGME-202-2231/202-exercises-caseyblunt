@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3555504200068892474, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5302653
+      value: 2.69
       objectReference: {fileID: 0}
     - target: {fileID: 3555504200068892474, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.608837
+      value: -3.66
       objectReference: {fileID: 0}
     - target: {fileID: 3555504200068892474, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,10 +54,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8954378478100079591, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
       propertyPath: m_Name
-      value: Large Monster Variant
+      value: Fleer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8954378478100079591, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4323926712977315352}
+    - targetCorrespondingSourceObject: {fileID: 8954378478100079591, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 236167767985895736}
   m_SourcePrefab: {fileID: 100100000, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+--- !u!212 &4507450185344973279 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1913639417833653620, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+  m_PrefabInstance: {fileID: 2594973775940844715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6361164247328005964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954378478100079591, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+  m_PrefabInstance: {fileID: 2594973775940844715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4323926712977315352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361164247328005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fadeff2180e9ed42bf4df8f5773fb64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPhysicsObject: {fileID: 7867602856097241067}
+  position: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
+--- !u!114 &236167767985895736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361164247328005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda220314fbf2e848b8773c63102d0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4507450185344973279}
+--- !u!114 &7867602856097241067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5272701390239443776, guid: 37524b0ddc6d46e428a162d2f59ad179, type: 3}
+  m_PrefabInstance: {fileID: 2594973775940844715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361164247328005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbeaedb3e001294f886e0ffa3147a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

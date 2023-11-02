@@ -39,7 +39,7 @@ public class PhysicsObject : MonoBehaviour
     {
         CheckForBounce();
 
-        ApplyGravity(Vector3.down * 9.81f);
+        //ApplyGravity(Vector3.down * 9.81f);
         // Calculate the velocity for this frame - New
         velocity += acceleration * Time.deltaTime;
 
@@ -105,4 +105,7 @@ public class PhysicsObject : MonoBehaviour
         }
     }
 
+    public Vector3 Velocity { get { return velocity; } }
+
+    public float MaxSpeed { get { return maxSpeed; } }
 }
