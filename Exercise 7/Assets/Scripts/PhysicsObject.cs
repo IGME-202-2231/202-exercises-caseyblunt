@@ -105,6 +105,8 @@ public class PhysicsObject : MonoBehaviour
         }
     }
 
+    
+
     public Vector3 Velocity { get { return velocity; } }
 
     public float MaxSpeed { get { return maxSpeed; } }

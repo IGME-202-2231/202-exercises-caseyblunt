@@ -20,17 +20,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seeker
       objectReference: {fileID: 0}
+    - target: {fileID: 1551628952361017390, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
+      propertyPath: m_TagString
+      value: Seeker
+      objectReference: {fileID: 0}
     - target: {fileID: 6207560834451929070, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6207560834451929070, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.29
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 6207560834451929070, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.32
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 6207560834451929070, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -120,4 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda220314fbf2e848b8773c63102d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 6378181414494999508}
+--- !u!212 &6378181414494999508 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1922554379359779890, guid: 47dac1874f52ae541a64e128957a6c38, type: 3}
+  m_PrefabInstance: {fileID: 4768629421414641638}
+  m_PrefabAsset: {fileID: 0}

@@ -46,4 +46,24 @@ public abstract class Agent : MonoBehaviour
     {
         return Seek(target.transform.position);
     }
+
+    Vector3 Flee(Vector3 targetPos)
+    {
+        // Calculate desired velocity
+        Vector3 desiredVelocity = transform.position - targetPos;
+
+        // Set desired = max speed
+        desiredVelocity = desiredVelocity.normalized * myPhysicsObject.MaxSpeed;
+
+        // Calculate flee steering force
+        Vector3 fleeingForce = desiredVelocity - myPhysicsObject.Velocity;
+
+        // Return flee steering force
+        return fleeingForce;
+    }
+
+    protected Vector3 Flee(GameObject target)
+    {
+        return Flee(target.transform.position);
+    }
 }

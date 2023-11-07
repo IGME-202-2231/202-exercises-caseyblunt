@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732732393}
-  - component: {fileID: 732732392}
+  - component: {fileID: 732732394}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -232,23 +232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &732732392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732732391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085afb3e4d5e3084c9fbc86a013bddb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacles:
-  - {fileID: 1088595451}
-  - {fileID: 1154688618}
-  fleer: {fileID: 1088595456}
-  seeker: {fileID: 1154688618}
 --- !u!4 &732732393
 Transform:
   m_ObjectHideFlags: 0
@@ -264,6 +247,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732732394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732732391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085afb3e4d5e3084c9fbc86a013bddb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleer: {fileID: 1088595456}
+  seeker: {fileID: 1154688621}
 --- !u!1 &1088595451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6361164247328005964, guid: b8acaaa63b88e9e4e9b35cbba0587658, type: 3}
@@ -285,11 +282,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6315715178823798728, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
   m_PrefabInstance: {fileID: 8972038611589628866}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1154688620 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6378181414494999508, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
+--- !u!114 &1154688621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2296218470362976757, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
   m_PrefabInstance: {fileID: 8972038611589628866}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154688618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda220314fbf2e848b8773c63102d0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2426935455092672345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,13 +349,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1154688618}
+    - target: {fileID: 4323926712977315352, guid: b8acaaa63b88e9e4e9b35cbba0587658, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361164247328005964, guid: b8acaaa63b88e9e4e9b35cbba0587658, type: 3}
       propertyPath: m_Name
       value: Fleer
       objectReference: {fileID: 0}
-    - target: {fileID: 6361164247328005964, guid: b8acaaa63b88e9e4e9b35cbba0587658, type: 3}
-      propertyPath: m_TagString
-      value: Fleer
+    - target: {fileID: 7867602856097241067, guid: b8acaaa63b88e9e4e9b35cbba0587658, type: 3}
+      propertyPath: maxSpeed
+      value: 16.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -373,11 +380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443470205652506632, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.29
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1443470205652506632, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.32
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 1443470205652506632, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -411,16 +418,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2296218470362976757, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 1154688620}
     - target: {fileID: 6315715178823798728, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
       propertyPath: m_Name
-      value: Seeker
-      objectReference: {fileID: 0}
-    - target: {fileID: 6315715178823798728, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
-      propertyPath: m_TagString
       value: Seeker
       objectReference: {fileID: 0}
     - target: {fileID: 6659035900906297922, guid: 79aafc20064c20e498d453e5d0b115c2, type: 3}
