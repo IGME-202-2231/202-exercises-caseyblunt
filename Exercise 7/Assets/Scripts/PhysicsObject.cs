@@ -8,10 +8,10 @@ public class PhysicsObject : MonoBehaviour
     [SerializeField] private Vector3 direction;
     [SerializeField] private Vector3 position;
     [SerializeField] private Vector3 velocity;
-    float minX;
-    float maxX;
-    float minY;
-    float maxY;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
     Camera mainCamera;
     [SerializeField] private Vector3 acceleration = Vector3.zero;
     [SerializeField] private float mass = 1;
@@ -37,7 +37,7 @@ public class PhysicsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckForBounce();
+        //CheckForBounce();
 
         //ApplyGravity(Vector3.down * 9.81f);
         // Calculate the velocity for this frame - New

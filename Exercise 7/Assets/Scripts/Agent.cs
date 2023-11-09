@@ -65,4 +65,17 @@ public abstract class Agent : MonoBehaviour
     {
         return Flee(target.transform.position);
     }
+
+    protected Vector3 StayInBoundsForce()
+    {
+        if (transform.position.x <= myPhysicsObject.minX ||
+            transform.position.x >= myPhysicsObject.maxX ||
+            transform.position.y <= myPhysicsObject.minY ||
+            transform.position.y >= myPhysicsObject.maxY)
+        {
+            return Seek(Vector3.zero);
+        }
+
+        return Vector3.zero;
+    }
 }
