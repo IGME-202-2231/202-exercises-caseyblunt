@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seek : Agent
+public class Wander : Agent
 {
-    [SerializeField] GameObject target;
+    [Min(1f)]
+    public float stayInBoundsWeight = 3f;
 
+    public float wanderWeight = 1f;
     protected override void CalcSteeringForces()
     {
-        //Seek(target, stayInBoundsWeight);
+        Wander(wanderWeight);
+        StayInBounds(stayInBoundsWeight);
     }
 
     private void OnDrawGizmosSelected()

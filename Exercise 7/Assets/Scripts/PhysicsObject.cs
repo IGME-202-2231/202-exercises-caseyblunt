@@ -13,6 +13,7 @@ public class PhysicsObject : MonoBehaviour
     public float minY;
     public float maxY;
     Camera mainCamera;
+    private Vector3 cameraSize;
     [SerializeField] private Vector3 acceleration = Vector3.zero;
     [SerializeField] private float mass = 1;
 
@@ -32,6 +33,11 @@ public class PhysicsObject : MonoBehaviour
         maxX = mainCamera.ViewportToWorldPoint(Vector3.one).x - objectWidth / 2;
         minY = mainCamera.ViewportToWorldPoint(Vector3.zero).y + objectHeight / 2;
         maxY = mainCamera.ViewportToWorldPoint(Vector3.one).y - objectHeight / 2;
+
+        cameraSize.y = Camera.main.orthographicSize;
+        cameraSize.x = cameraSize.y * Camera.main.aspect;
+
+        direction = Random.insideUnitCircle.normalized;
     }
 
     // Update is called once per frame
@@ -48,7 +54,7 @@ public class PhysicsObject : MonoBehaviour
         position += velocity * Time.deltaTime;
 
         // Grab current direction from velocity  - New
-        direction = velocity.normalized;
+        //direction = velocity.normalized;
 
         transform.position = position;
 
@@ -105,9 +111,13 @@ public class PhysicsObject : MonoBehaviour
         }
     }
 
-    
+    public Vector3 Position { get { return position; } }
 
     public Vector3 Velocity { get { return velocity; } }
 
+    public Vector3 Direction { get { return direction; } }
+
     public float MaxSpeed { get { return maxSpeed; } }
+
+    public Vector3 CameraSize { get { return cameraSize; } }
 }
