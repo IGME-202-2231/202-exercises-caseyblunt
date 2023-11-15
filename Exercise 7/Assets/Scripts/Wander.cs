@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Wander : Agent
 {
-    [Min(1f)]
-    public float stayInBoundsWeight = 3f;
-
-    public float wanderWeight = 1f;
     protected override void CalcSteeringForces()
     {
-        Wander(wanderWeight);
-        StayInBounds(stayInBoundsWeight);
+        totalForce += Wander(1f, 2f);
+        totalForce += StayInBounds();
     }
 
     private void OnDrawGizmosSelected()

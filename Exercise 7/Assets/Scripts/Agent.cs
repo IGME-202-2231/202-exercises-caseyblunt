@@ -11,7 +11,7 @@ public abstract class Agent : MonoBehaviour
 
     int maxSpeed;
 
-    private Vector3 totalForce = Vector3.zero;
+    protected Vector3 totalForce = Vector3.zero;
     public float maxForce = 5f;
 
     private float wanderAngle = 0f;
@@ -33,7 +33,7 @@ public abstract class Agent : MonoBehaviour
 
     protected abstract void CalcSteeringForces();
 
-    protected void Seek(Vector3 targetPos, float weight = 1f)
+    protected Vector3 Seek(Vector3 targetPos)
     {
         // Calculate desired velocity
         Vector3 desiredVelocity = targetPos - myPhysicsObject.Position;
@@ -45,7 +45,7 @@ public abstract class Agent : MonoBehaviour
         Vector3 seekingForce = desiredVelocity - myPhysicsObject.Velocity;
 
         // Return seek steering force
-        totalForce += seekingForce * weight;
+        return seekingForce;
 
     }
 
@@ -74,17 +74,16 @@ public abstract class Agent : MonoBehaviour
         return Flee(target.transform.position);
     }
 
-    protected void Wander(float weight = 1f)
+    protected Vector3 Wander(float time, float radius)
     {
-        //Update the angle of current wander
-        float maxWanderChange = maxWanderChangePerSecond * Time.deltaTime;
-        wanderAngle += Random.Range(-maxWanderChange, maxWanderChange);
+        Vector3 futurePos = GetFuturePosition(time);
 
-        wanderAngle = Mathf.Clamp(wanderAngle, -maxWanderAngle, maxWanderAngle);
-        //get position that is defined by wander angle
-        Vector3 wanderTarget = Quaternion.Euler(0, 0, wanderAngle) * myPhysicsObject.Direction.normalized + myPhysicsObject.Position;
-        //seek towards wander position
-        Seek(wanderTarget, weight);
+        float randAngle = Random.Range(0, 360);
+
+        futurePos.x += Mathf.Cos(randAngle) * radius;
+        futurePos.y += Mathf.Sin(randAngle) * radius;
+
+        return Seek(futurePos);
     }
 
     // New function for GetFuturePosition
@@ -93,7 +92,7 @@ public abstract class Agent : MonoBehaviour
         return myPhysicsObject.Position + myPhysicsObject.Velocity * secondsAhead;
     }
 
-    protected void StayInBounds(float weight = 1f)
+    protected Vector3 StayInBounds()
     {
         Vector3 futurePos = GetFuturePosition();
 
@@ -102,9 +101,9 @@ public abstract class Agent : MonoBehaviour
             futurePos.y > myPhysicsObject.CameraSize.y ||
             futurePos.y < - myPhysicsObject.CameraSize.y)
         {
-            Seek(Vector3.zero, weight);
+            return Seek(Vector3.zero);
         }
 
-        
+        return Vector3.zero;
     }
 }
